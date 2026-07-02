@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pour Melody ❤️</title>
+
+    <!-- Police -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Coeurs qui tombent -->
+    <div id="hearts-container"></div>
+
+    <!-- Bouton Mode Nuit -->
+    <button id="themeToggle" title="Mode Nuit">
+        🌙
+    </button>
+
+    <!-- Musique -->
+    <audio id="music" loop>
+        <source src="assets/music/Jai_rencontré_une_fille.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicButton">
+        🎵 Notre chanson
+    </button>
+
+    <!-- Accueil -->
+    <header class="hero">
+
+        <h1>Melody Millet ❤️</h1>
+
+        <p>
+            Chaque seconde me rapproche un peu plus de toi...
+        </p>
+
+    </header>
+
+    <!-- Compteur -->
+    <section class="glass countdown-section">
+
+        <h2>⏳ Plus que...</h2>
+
+        <div class="countdown">
+
+            <div class="box">
+                <span id="days">00</span>
+                <small>Jours</small>
+            </div>
+
+            <div class="box">
+                <span id="hours">00</span>
+                <small>Heures</small>
+            </div>
+
+            <div class="box">
+                <span id="minutes">00</span>
+                <small>Minutes</small>
+            </div>
+
+            <div class="box">
+                <span id="seconds">00</span>
+                <small>Secondes</small>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Lettre -->
+        <section class="glass">
+
+            <h2>💌 Une lettre pour toi</h2>
+
+            <div id="envelope">
+
+                📩
+
+            </div>
+
+            <div id="letter">
+
+        <h3>Ma Melody ❤️</h3>
+
+        <div id="typedText"></div>
+
+        <h3 style="margin-top:20px;">
+            Je t’aime ❤️
+        </h3>
+
+    </div>
+
+    </section>
+
+    <!-- Galerie -->
+    <section class="glass">
+
+        <h2>📸 Nos souvenirs</h2>
+
+        <div class="gallery">
+
+            <img src="assets/images/photo1.jpg" alt="">
+            <img src="assets/images/photo2.jpg" alt="">
+            <img src="assets/images/photo3.jpg" alt="">
+            <img src="assets/images/photo4.jpg" alt="">
+            <img src="assets/images/photo5.jpg" alt="">
+            <img src="assets/images/photo6.jpg" alt="">
+
+        </div>
+
+    </section>
+
+    <!-- Citation -->
+    <section class="glass quote">
+
+        <h2>❤️</h2>
+
+        <p id="loveQuote">
+            "Chaque jour passé loin de toi est un jour de trop."
+        </p>
+
+    </section>
+
+    <!-- Surprise -->
+    <section id="surprise" class="glass hidden">
+
+        <h1>🎉</h1>
+
+        <h2>Enfin le grand jour ❤️</h2>
+
+        <p>
+            Plus besoin de compter...
+            Nous allons enfin nous retrouver.
+        </p>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            Fait avec tout mon ❤️ pour Melody
+        </p>
+
+    </footer>
+
+    <!-- Feu d'artifice -->
+    <canvas id="fireworks"></canvas>
+
+    <!-- Javascript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
