@@ -104,6 +104,22 @@ transform:translateY(-5px);
 
 }
 
+.hero{
+    will-change: transform;
+}
+
+.gallery img{
+    will-change: transform;
+}
+
+.box{
+    will-change: transform;
+}
+
+.glass{
+    will-change: transform, opacity;
+}
+
 /* ===========================
    TITRES
 =========================== */

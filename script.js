@@ -2,7 +2,7 @@
    COMPTE À REBOURS
 ========================================== */
 
-const targetDate = new Date("July 20, 2026 00:00:00").getTime();
+const targetDate = new Date("July 17, 2026 00:00:00").getTime();
 
 const surprise = document.getElementById("surprise");
 
@@ -117,7 +117,7 @@ const message = [
 "Tu es devenue une évidence.",
 "Quelque chose de rare, de précieux, que je ne veux pas perdre.",
 
-"J’ai tellement hâte que le 20 juillet arrive.",
+"J’ai tellement hâte que le 17 juillet arrive.",
 "Pas seulement pour le jour…",
 "Mais pour enfin te voir, te retrouver, et arrêter de compter.",
 
@@ -204,7 +204,7 @@ const quotes=[
 
 "Tu illumines ma vie ✨",
 
-"Le 20 juillet sera notre plus beau jour ❤️",
+"Le 17 juillet sera notre plus beau jour ❤️",
 
 "Je pense à toi chaque jour 💖",
 
@@ -245,7 +245,7 @@ setInterval(()=>{
 
 document.addEventListener("click",(e)=>{
 
-    for(let i=0;i<15;i++){
+    for(let i=0;i<8;i++){
 
         createHeart(e.clientX,e.clientY);
 
@@ -418,45 +418,44 @@ function createHeart(x,y){
     CURSEUR MAGIQUE
     ========================================== */
 
-    document.addEventListener("mousemove",(e)=>{
+        let lastSparkle = 0;
 
-        const sparkle=document.createElement("div");
+    document.addEventListener("mousemove", (e) => {
 
-        sparkle.innerHTML="💖";
+        const now = Date.now();
 
-        sparkle.style.position="fixed";
-        sparkle.style.left=e.clientX+"px";
-        sparkle.style.top=e.clientY+"px";
-        sparkle.style.pointerEvents="none";
-        sparkle.style.fontSize="12px";
-        sparkle.style.opacity=".8";
-        sparkle.style.zIndex="99999";
+        if (now - lastSparkle < 40) return;
+
+        lastSparkle = now;
+
+        const sparkle = document.createElement("div");
+        sparkle.textContent = "💖";
+
+        sparkle.style.position = "fixed";
+        sparkle.style.left = e.clientX + "px";
+        sparkle.style.top = e.clientY + "px";
+        sparkle.style.pointerEvents = "none";
+        sparkle.style.fontSize = "12px";
+        sparkle.style.zIndex = "99999";
 
         document.body.appendChild(sparkle);
 
         sparkle.animate([
-
             {
-                transform:"translateY(0px) scale(1)",
+                transform:"translateY(0)",
                 opacity:1
             },
-
             {
-                transform:"translateY(-30px) scale(0)",
+                transform:"translateY(-30px)",
                 opacity:0
             }
-
         ],{
-
-            duration:700
-
+            duration:600
         });
 
         setTimeout(()=>{
-
             sparkle.remove();
-
-        },700);
+        },600);
 
     });
 
@@ -469,30 +468,18 @@ function createHeart(x,y){
 
     setInterval(()=>{
 
-        boxes.forEach(box=>{
-
-            box.animate([
-
+        boxes.forEach(box => {
+            box.animate(
+                [
+                    { transform: "scale(1)" },
+                    { transform: "scale(1.04)" },
+                    { transform: "scale(1)" }
+                ],
                 {
-                    transform:"scale(1)"
-                },
-
-                {
-                    transform:"scale(1.06)"
-                },
-
-                {
-                    transform:"scale(1)"
+                    duration: 500
                 }
-
-            ],{
-
-                duration:600
-
-            });
-
+            );
         });
-
     },1000);
 
 }
